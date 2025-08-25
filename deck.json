@@ -1,0 +1,105 @@
+{
+  "name": "Russian Doll Deck",
+  "cards": [
+   {
+      "q": "Paris",
+      "a": "insane"
+    },
+    {
+      "q": "Tokyo",
+      "a": "really"
+    },
+    {
+      "q": "Cairo",
+      "a": "older"
+    },
+    {
+      "q": "Rome",
+      "a": "wander"
+    },
+    {
+      "q": "Sydney",
+      "a": "Scream"
+    },
+    {
+      "q": "Rio de Janeiro",
+      "a": "stretch"
+    },
+    {
+      "q": "Shanghai",
+      "a": "border"
+    },
+    {
+      "q": "Bombay",
+      "a": "cryptic"
+    },
+    {
+      "q": "Dubai",
+      "a": "furious"
+    },
+    {
+      "q": "Venice",
+      "a": "sinking"
+    },
+    {
+      "q": "Florence",
+      "a": "pitty"
+    },
+    {
+      "q": "Italian city",
+      "a": "cheesy"
+    },
+    {
+      "q": "Barcelona",
+      "a": "family"
+    },
+    {
+      "q": "Spanish City",
+      "a": "bask"
+    },
+    {
+      "q": "Nordic/Swiss",
+      "a": "saga"
+    },
+    {
+      "q": "London",
+      "a": "pound"
+    },
+    {
+      "q": "Greece",
+      "a": "sandy"
+    },
+    {
+      "q": "Asian country",
+      "a": "noodle"
+    },
+    {
+      "q": "South America",
+      "a": "gold"
+    },
+    {
+      "q": "Mexico/Central",
+      "a": "south"
+    },
+    {
+      "q": "Marrekech/Tunisia",
+      "a": "More"
+    },
+    {
+      "q": "Eastern Europe",
+      "a": "check"
+    },
+    {
+      "q": "Tropical",
+      "a": "Relax"
+    },
+    {
+      "q": "Pub",
+      "a": "public"
+    },
+    {
+      "q": "Istanbul",
+      "a": "bizzarre"
+    }
+  ]
+}
