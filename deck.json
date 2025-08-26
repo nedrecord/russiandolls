@@ -30,10 +30,6 @@
       "a": "border"
     },
     {
-      "q": "Bombay",
-      "a": "cryptic"
-    },
-    {
       "q": "Dubai",
       "a": "furious"
     },
@@ -74,7 +70,7 @@
       "a": "noodle"
     },
     {
-      "q": "South America",
+      "q": "South America/Jungle",
       "a": "gold"
     },
     {
@@ -82,7 +78,7 @@
       "a": "south"
     },
     {
-      "q": "Marrekech/Tunisia",
+      "q": "Marrekech/Tunisia/India/Istanbul",
       "a": "More"
     },
     {
@@ -96,10 +92,6 @@
     {
       "q": "Pub",
       "a": "public"
-    },
-    {
-      "q": "Istanbul",
-      "a": "bizzarre"
     }
   ]
 }
