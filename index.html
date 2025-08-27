@@ -70,12 +70,35 @@
       else { answerEl.style.display='flex'; frontEl.style.display='none'; }
     }
 
-    function randomOtherIndex() {
-      if (state.cards.length < 2) return state.index;
-      let i;
-      do { i = Math.floor(Math.random() * state.cards.length); } while (i === state.index);
-      return i;
+function buildOrder() {
+  // make [0..N-1] then shuffle it
+  const order = [...state.cards.keys()];
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  state.order = order;
+  state.pos = 0;
+}
+
+function nextFromBag() {
+  // refill when we’ve shown all cards
+  if (!state.order || state.pos >= state.order.length) buildOrder();
+
+  // avoid showing the exact same card twice in a row
+  let nextIdx = state.order[state.pos++];
+  if (state.cards.length > 1 && nextIdx === state.index) {
+    if (state.pos < state.order.length) {
+      const tmp = nextIdx;
+      nextIdx = state.order[state.pos];
+      state.order[state.pos] = tmp;
+    } else {
+      buildOrder();
+      nextIdx = state.order[state.pos++];
     }
+  }
+  return nextIdx;
+}
 
     stage.addEventListener('click', flip);
 
@@ -84,16 +107,19 @@
       frontEl.style.display = 'flex';
     });
 
-    nextBtn.addEventListener('click', () => {
-      state.index = randomOtherIndex();
-      render();
-    });
+nextBtn.addEventListener('click', () => {
+  state.index = nextFromBag();
+  render();
+});
 
-    (async()=>{
-      state = await loadDeck();
-      state.index = Math.floor(Math.random() * state.cards.length);
-      render();
-    })();
+(async()=>{ 
+  state = await loadDeck(); 
+  // optional: remove this next line if you don’t want an initial shuffle of the deck data itself
+  shuffle(state.cards);
+  buildOrder();
+  state.index = nextFromBag();
+  render(); 
+})();
   </script>
 </body>
 </html>
